@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 26%;
+    --card-foreground: 0 0% 13%;
+    --card-content: 0 0% 7%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 73%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 11%;
+    --accent-foreground: 0 0% 16%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 7%;
+    --input-foreground: 0 0% 15%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem
+  }
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border pointer-events-none;
+  }
+
+  body {
+    @apply relative antialiased
+    w-screen h-screen
+    bg-background text-foreground
+    font-sans text-[0.16rem] leading-snug
+    scroll-smooth;
+  }
+
+  button, a, *::-webkit-scrollbar, nextjs-portal {
+    @apply pointer-events-auto;
+  }
+
+  #layout {
+    @apply relative size-full overflow-hidden;
+  }
+
+  #frame {
+    @apply absolute inset-0 overflow-hidden;
+  }
+
+  #landing {
+    @apply h-full;
+  }
+
+  .landing-section {
+    @apply absolute inset-0 z-0;
+  }
+
+  .fixed-section {
+    @apply absolute inset-0 z-50;
+  }
+
+  section {
+    @apply absolute top-[2.03rem] left-[3.91rem] right-[4.6rem] h-[6.6rem]
+    text-[0.21rem] z-50 overflow-hidden;
+  }
+}

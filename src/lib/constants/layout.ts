@@ -1,0 +1,3 @@
+export const DEFAULT_ASPECT_RATIO = 16 / 9;
+export const DEFAULT_FRAME_ASPECT_RATIO = 16 / 7;
+export const DEFAULT_SCREEN_DELTA = 10.79;
