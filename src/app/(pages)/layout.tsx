@@ -7,12 +7,14 @@ import {
   DEFAULT_SCREEN_DELTA,
 } from "@/lib/constants/layout";
 import dynamic from "next/dynamic";
-import Footer from "@/components/portfolio/footer";
 
 const Loader = dynamic(() => import("@/components/portfolio/loader"), {
   ssr: false,
 });
 const Header = dynamic(() => import("@/components/portfolio/header"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("@/components/portfolio/footer"), {
   ssr: false,
 });
 
