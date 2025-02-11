@@ -7,6 +7,7 @@ import {
   DEFAULT_SCREEN_DELTA,
 } from "@/lib/constants/layout";
 import dynamic from "next/dynamic";
+import Footer from "@/components/portfolio/footer";
 
 const Loader = dynamic(() => import("@/components/portfolio/loader"), {
   ssr: false,
@@ -61,7 +62,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
         <div className="fixed-section">
           <Header />
           <div>Navbar</div>
-          <div>Footer</div>
+          <Footer />
         </div>
 
         {children}
