@@ -1,46 +1,39 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import * as React from "react";
 import { FaMusic } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import css from "../header-menu.module.scss";
 
 export default function MusicButton() {
-  const btnRef = useRef<HTMLButtonElement | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(false);
 
-  const handleClick = useCallback(() => {
+  const handleClick = React.useCallback(() => {
     setIsPlaying((prev) => !prev);
   }, []);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
+  React.useEffect(() => {
+    const player = document.getElementById("media-player") as HTMLAudioElement;
+    if (!player) return;
 
+    player.load();
     if (isPlaying) {
-      audio.volume = 0.15;
-      audio.play();
+      player.volume = 0.15;
+      player.play();
     } else {
-      audio.pause();
+      player.pause();
     }
   }, [isPlaying]);
 
   return (
-    <>
-      <button
-        ref={btnRef}
-        className={cn(css.headerButton, "aspect-square")}
-        onClick={handleClick}
-      >
-        {!isPlaying && (
-          <div className="absolute w-full h-[.08rem] rotate-45 bg-secondary" />
-        )}
-        <FaMusic />
-      </button>
-      <audio ref={audioRef} loop autoPlay>
-        <source src={"/music/bg-music.mp3"} type="audio/mp3" />
-      </audio>
-    </>
+    <button
+      className={cn(css.headerButton, "aspect-square")}
+      onClick={handleClick}
+    >
+      {!isPlaying && (
+        <div className="absolute w-full h-[.08rem] rotate-45 bg-secondary" />
+      )}
+      <FaMusic />
+    </button>
   );
 }

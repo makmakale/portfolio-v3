@@ -6,20 +6,7 @@ import {
   DEFAULT_FRAME_ASPECT_RATIO,
   DEFAULT_SCREEN_DELTA,
 } from "@/lib/constants/layout";
-import dynamic from "next/dynamic";
-
-const Loader = dynamic(() => import("@/components/portfolio/loader"), {
-  ssr: false,
-});
-const Header = dynamic(() => import("@/components/portfolio/header"), {
-  ssr: false,
-});
-const Navbar = dynamic(() => import("@/components/portfolio/navbar"), {
-  ssr: false,
-});
-const Footer = dynamic(() => import("@/components/portfolio/footer"), {
-  ssr: false,
-});
+import Loader from "@/components/portfolio/loader";
 
 export default function Layout({ children }: React.PropsWithChildren) {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -63,15 +50,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
   return (
     <>
       {isLoading && <Loader />}
-      <>
-        <div className="fixed-section">
-          <Header />
-          <Navbar />
-          <Footer />
-        </div>
-
-        {children}
-      </>
+      {children}
     </>
   );
 }

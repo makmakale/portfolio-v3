@@ -1,17 +1,6 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const BouncyText = dynamic(
-  () => import("@/components/animations/bouncy-text"),
-  { ssr: false },
-);
-const DownloadButtonAnimation = dynamic(
-  () =>
-    import(
-      "@/components/portfolio/footer/components/download-button/download-button.animation"
-    ),
-  { ssr: false },
-);
+import BouncyText from "@/components/animations/bouncy-text";
+import DownloadButtonAnimation from "@/components/portfolio/footer/components/download-button/download-button.animation";
 
 export default function FooterDownloadBtn() {
   if (!process.env.NEXT_PUBLIC_RESUME_LINK) return null;
