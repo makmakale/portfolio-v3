@@ -10,6 +10,7 @@ import Loader from "@/components/portfolio/loader";
 
 export default function Layout({ children }: React.PropsWithChildren) {
   const [isLoading, setIsLoading] = React.useState(true);
+  console.log("Layout");
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -47,10 +48,5 @@ export default function Layout({ children }: React.PropsWithChildren) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <>
-      {isLoading && <Loader />}
-      {children}
-    </>
-  );
+  return <>{isLoading ? <Loader /> : children}</>;
 }

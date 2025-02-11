@@ -11,6 +11,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("RootLayout");
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -30,6 +31,7 @@ export default function RootLayout({
                 <Navbar />
                 <Footer />
               </div>
+
               {children}
 
               <audio id="media-player" loop className="hidden">
