@@ -56,7 +56,7 @@
   }
 
   #frame {
-    @apply absolute inset-0 overflow-hidden;
+    @apply absolute h-full aspect-[16/7] left-1/2 -translate-x-1/2 overflow-hidden;
   }
 
   #landing {
