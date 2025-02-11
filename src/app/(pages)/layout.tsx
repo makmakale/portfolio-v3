@@ -11,6 +11,9 @@ import dynamic from "next/dynamic";
 const Loader = dynamic(() => import("@/components/portfolio/loader"), {
   ssr: false,
 });
+const Header = dynamic(() => import("@/components/portfolio/header"), {
+  ssr: false,
+});
 
 export default function Layout({ children }: React.PropsWithChildren) {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -55,13 +58,13 @@ export default function Layout({ children }: React.PropsWithChildren) {
     <>
       {isLoading && <Loader />}
       <>
-        {children}
-
         <div className="fixed-section">
-          <div>Header</div>
+          <Header />
           <div>Navbar</div>
           <div>Footer</div>
         </div>
+
+        {children}
       </>
     </>
   );
