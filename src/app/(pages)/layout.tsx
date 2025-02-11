@@ -14,6 +14,9 @@ const Loader = dynamic(() => import("@/components/portfolio/loader"), {
 const Header = dynamic(() => import("@/components/portfolio/header"), {
   ssr: false,
 });
+const Navbar = dynamic(() => import("@/components/portfolio/navbar"), {
+  ssr: false,
+});
 const Footer = dynamic(() => import("@/components/portfolio/footer"), {
   ssr: false,
 });
@@ -63,7 +66,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
       <>
         <div className="fixed-section">
           <Header />
-          <div>Navbar</div>
+          <Navbar />
           <Footer />
         </div>
 
