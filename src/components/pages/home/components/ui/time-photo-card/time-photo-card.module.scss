@@ -1,0 +1,115 @@
+.card {
+  position: relative;
+  border-radius: .14rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .5);
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: url('/images/rust.png'), linear-gradient(to bottom right, #2e2e2e, #181818);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    z-index: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0.04rem;
+    border-radius: .14rem;
+    z-index: 1;
+    box-shadow: -0.04rem -0.04rem 0.04rem rgba(255, 255, 255, .1), 0.04rem 0.04rem 0.04rem rgba(0, 0, 0, .5);
+    filter: blur(0.02rem);
+  }
+}
+
+.cardTimeBox {
+  position: absolute;
+  z-index: 10;
+  width: 60%;
+  height: 70%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  background-image: linear-gradient(to bottom, #1b1b1b, #3e3e3e);
+  border-left: .03rem solid black;
+  border-right: .03rem solid black;
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    box-shadow: inset .02rem 0 .02rem rgba(255, 255, 255, .1),
+    inset -0.02rem 0 0.02rem rgba(255, 255, 255, 0.1);
+  }
+}
+
+.cardTimeContent {
+  margin-block: .2rem;
+  margin-inline: .05rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.cardImageBox {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  translate: -50% -50%;
+  top: calc(50% + 0.3rem);
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, black, black, #525252);
+
+  .cardImageBoxGradient {
+    position: absolute;
+    inset: 0.05rem;
+    border-radius: inherit;
+    overflow: hidden;
+    background-image: linear-gradient(
+                    0deg,
+                    rgba(255, 0, 0, 1) 0%,
+                    rgba(255, 154, 0, 1) 10%,
+                    rgba(208, 222, 33, 1) 20%,
+                    rgba(79, 220, 74, 1) 30%,
+                    rgba(63, 218, 216, 1) 40%,
+                    rgba(47, 201, 226, 1) 50%,
+                    rgba(28, 127, 238, 1) 60%,
+                    rgba(95, 21, 242, 1) 70%,
+                    rgba(186, 12, 248, 1) 80%,
+                    rgba(251, 7, 217, 1) 90%,
+                    rgba(255, 0, 0, 1) 100%
+    );
+
+    .imageWrapper {
+      position: absolute;
+      inset: 0.14rem;
+      border-radius: inherit;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 .1rem black;
+
+      .imageInnerWrapper {
+        position: absolute;
+        inset: 0.05rem;
+        border-radius: inherit;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          object-fit: cover;
+          scale: 1.05;
+        }
+      }
+    }
+  }
+}
+
+

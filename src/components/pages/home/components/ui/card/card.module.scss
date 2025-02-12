@@ -1,0 +1,115 @@
+.card {
+  position: relative;
+  padding-inline: 0.25rem;
+  padding-block: 0.15rem;
+  border-radius: 0.1rem;
+  border: 0.04rem solid #424242ff;
+  background: #212121ff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0.04rem;
+    background: linear-gradient(to bottom, #424242ff, #212121ff);
+    border-radius: 0.04rem;
+  }
+}
+
+.cardInnerCut {
+  position: absolute;
+  inset: 0.04rem;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 60%;
+    transform: translateY(-50%);
+    background: #212121ff;
+    width: 0.12rem;
+    height: 40%;
+  }
+
+  &::before {
+    left: 0;
+    border-top-right-radius: 0.06rem;
+    border-bottom-right-radius: 0.06rem;
+    box-shadow: inset -0.04rem 0 0.04rem rgba(0, 0, 0, 0.4);
+  }
+
+  &::after {
+    right: 0;
+    border-top-left-radius: 0.06rem;
+    border-bottom-left-radius: 0.06rem;
+    box-shadow: inset 0.04rem 0 0.04rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+.cardHeader {
+  position: relative;
+}
+
+.cardSubHeader {
+  position: relative;
+  font-size: 0.21rem;
+  font-weight: bold;
+  color: #c4c4c4;
+  background: linear-gradient(to bottom, #262626, #2b2b2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding-inline: 0.15rem;
+  padding-block: 0.1rem;
+  box-shadow: inset 0.02rem 0.02rem 0.02rem rgba(0, 0, 0, 0.2),
+  inset -0.02rem -0.02rem 0.02rem rgba(255, 255, 255, 0.15);
+}
+
+.cardTitle {
+  position: relative;
+  font-size: 0.56rem;
+  font-family: var(--font-dela), sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom, black, #212121);
+  text-shadow: 0.01rem 0.01rem 0 rgba(255, 255, 255, 0.1);
+}
+
+.cardContentWrapper {
+  position: relative;
+  background: #121212ff;
+  border-radius: 0.14rem;
+  box-shadow: inset 0 0 0.1rem rgba(0, 0, 0, 0.6),
+  inset -0.02rem -0.02rem 0.04rem rgba(255, 255, 255, 0.4);
+  padding: 0.1rem;
+  padding-bottom: 0.24rem;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -0.01rem;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 0.1rem;
+    border-top-left-radius: 0.16rem;
+    border-top-right-radius: 0.16rem;
+    box-shadow: -0.02rem -0.02rem 0.02rem rgba(255, 255, 255, 0.2);
+    background: #212121ff;
+  }
+}
+
+.cardContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.1rem;
+  overflow: hidden;
+}
