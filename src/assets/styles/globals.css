@@ -75,4 +75,9 @@
     @apply absolute top-[2.03rem] left-[3.91rem] right-[4.6rem] h-[6.6rem]
     text-[0.21rem] z-50 overflow-hidden;
   }
+
+  .highlight {
+    @apply text-primary italic font-semibold;
+    font-family: system-ui;
+  }
 }
