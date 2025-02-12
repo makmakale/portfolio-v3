@@ -1,6 +1,22 @@
 import "@/assets/styles/globals.css";
-import * as fonts from "@/lib/constants/fonts";
+import { Dela_Gothic_One, Poppins, Teko } from "next/font/google";
 import bgImg from "@/assets/images/portfolio/bg-black.jpg";
+import Loader from "@/components/portfolio/loader";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-sans",
+});
+const dela = Dela_Gothic_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-dela",
+});
+const teko = Teko({
+  subsets: ["latin"],
+  variable: "--font-teko",
+});
 
 export default function RootLayout({
   children,
@@ -9,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${fonts.poppins.variable} ${fonts.delaGothicOne.variable} ${fonts.teko.variable}`}
-      >
+      <body className={`${poppins.variable} ${dela.variable} ${teko.variable}`}>
         <div id="layout">
           <div id="frame">
             <div
@@ -25,6 +39,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        <Loader />
       </body>
     </html>
   );
