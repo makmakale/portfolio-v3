@@ -20,7 +20,9 @@ export default function MusicButton() {
 
     if (isPlaying) {
       audio.volume = 0.15;
-      audio.play();
+      if (audio.paused) {
+        audio.play();
+      }
     } else {
       audio.pause();
     }
@@ -38,7 +40,7 @@ export default function MusicButton() {
         )}
         <FaMusic />
       </button>
-      <audio ref={audioRef} loop autoPlay>
+      <audio ref={audioRef} loop>
         <source src={"/music/bg-music.mp3"} type="audio/mp3" />
       </audio>
     </>
