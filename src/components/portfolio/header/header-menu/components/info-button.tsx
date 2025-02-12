@@ -21,24 +21,46 @@ export default function InfoButton() {
         </button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-[12rem]">
+      <DialogContent className="max-w-[8rem]">
         <DialogHeader>
           <DialogTitle>Portfolio Info</DialogTitle>
         </DialogHeader>
-        <DialogDescription className="space-y-1">
-          <p>
-            Inspired by <b>Zenless Zone Zero</b>:
-          </p>
-          <Button variant="link" asChild>
-            <Link
-              href="https://zenless.hoyoverse.com/ru-ru"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="italic"
-            >
-              https://zenless.hoyoverse.com
-            </Link>
-          </Button>
+        <DialogDescription>
+          <div className="p-1">
+            <div className="bg-black rounded-[.2rem] p-2 space-y-1">
+              <div>
+                <p>
+                  Inspired by <b>Zenless Zone Zero</b>:
+                </p>
+                <Button variant="link" asChild>
+                  <Link
+                    href="https://zenless.hoyoverse.com/ru-ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="italic"
+                  >
+                    https://zenless.hoyoverse.com
+                  </Link>
+                </Button>
+              </div>
+              <hr className="border-secondary" />
+              <div>
+                <p>
+                  Music: <b>Sky Toes – Straight Through The Meadow</b> from
+                </p>
+                <Button variant="link" asChild>
+                  <Link
+                    href="https://fonau.ru/collection/atmosfernyj/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="italic"
+                  >
+                    https://fonau.ru
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </DialogDescription>
       </DialogContent>
     </Dialog>
