@@ -8,9 +8,6 @@ import {
 } from "@/lib/constants/layout";
 import dynamic from "next/dynamic";
 
-const Loader = dynamic(() => import("@/components/portfolio/loader"), {
-  ssr: false,
-});
 const Header = dynamic(() => import("@/components/portfolio/header"), {
   ssr: false,
 });
@@ -22,8 +19,6 @@ const Footer = dynamic(() => import("@/components/portfolio/footer"), {
 });
 
 export default function Layout({ children }: React.PropsWithChildren) {
-  const [isLoading, setIsLoading] = React.useState(true);
-
   React.useEffect(() => {
     const handleResize = () => {
       const layout = document.getElementById("layout")!;
@@ -51,7 +46,10 @@ export default function Layout({ children }: React.PropsWithChildren) {
 
     const load = async () => {
       handleResize();
-      setIsLoading(false);
+      setTimeout(() => {
+        const loader = document.getElementById("loader")!;
+        loader.style.display = "none";
+      }, 1000);
     };
 
     load();
@@ -62,16 +60,13 @@ export default function Layout({ children }: React.PropsWithChildren) {
 
   return (
     <>
-      {isLoading && <Loader />}
-      <>
-        <div className="fixed-section">
-          <Header />
-          <Navbar />
-          <Footer />
-        </div>
+      <div className="fixed-section">
+        <Header />
+        <Navbar />
+        <Footer />
+      </div>
 
-        {children}
-      </>
+      {children}
     </>
   );
 }
