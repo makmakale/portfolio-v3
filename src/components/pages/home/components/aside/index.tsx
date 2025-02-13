@@ -20,8 +20,7 @@ export default function HomeAside() {
           alt={"photo"}
           loading="eager"
           fill
-          objectFit="cover"
-          objectPosition="center"
+          className="object-cover bg-center"
         />
       </TimePhotoCardImageBox>
     </TimePhotoCard>
