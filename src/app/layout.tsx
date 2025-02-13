@@ -1,11 +1,10 @@
 import "@/assets/styles/globals.css";
 import { Dela_Gothic_One, Poppins, Teko } from "next/font/google";
-import bgImg from "@/assets/images/portfolio/bg-black.jpg";
 import Loader from "@/components/portfolio/loader";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-sans",
 });
 const dela = Dela_Gothic_One({
@@ -15,6 +14,7 @@ const dela = Dela_Gothic_One({
 });
 const teko = Teko({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-teko",
 });
 
@@ -28,15 +28,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${dela.variable} ${teko.variable}`}>
         <div id="layout">
           <div id="frame">
-            <div
-              id="landing"
-              className="bg-no-repeat bg-left-top bg-contain"
-              style={{
-                backgroundImage: `url(${bgImg.src})`,
-              }}
-            >
-              {children}
-            </div>
+            <div id="landing">{children}</div>
           </div>
         </div>
         <Loader />
