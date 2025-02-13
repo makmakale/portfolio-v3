@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maksim's Portfolio (version 3)
+<hr/>
 
-## Getting Started
+<details>
+<summary>v3.1.0.0 - Home page content</summary>
+<ul>
+<li>Create UI card</li>
+<li>Animate card appearance</li>
+<li>Add Minsk time and photo from left side of card</li>
+<li>
+<p>Content section:</p>
+<ul>
+    <li>
+    <p>Header</p>
+        <ul>
+            <li>Years of experience</li>
+            <li>Location</li>
+            <li>Birthday</li>
+        </ul>
+    </li>
+    <li>
+        <p>Inner content</p>
+        <ul>
+            <li>Fill with text</li>
+        </ul>
+    </li>
+    <li>
+        <p>Hobbies</p>
+        <ul>
+            <li>Create animated bg</li>
+            <li>Hobbies mini-cards</li>
+        </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</details>
 
-First, run the development server:
+<hr/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<details>
+<summary>v3.0.5.1-4 - improvements</summary>
+<ul>
+<li>Make some components dynamic imported</li>
+<li>Fixes for bg music play</li>
+<li>Removed local fonts because of weird behavior on prod</li>
+</ul>
+</details>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<hr/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<details>
+<summary>v3.0.5.0 - default pages</summary>
+<ul>
+<li>Extend list of pages with primary color and footer bg</li>
+<li>Added page bg images</li>
+<li>Create page template</li>
+</ul>
+</details>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<hr/>
 
-## Learn More
+<details>
+<summary>v3.0.4.0 - navbar menu</summary>
+<ul>
+<li>List of pages</li>
+<li>Navbar menu</li>
+</ul>
+</details>
 
-To learn more about Next.js, take a look at the following resources:
+<hr/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<details>
+<summary>v3.0.3.0 - footer</summary>
+<ul>
+<li>Running line</li>
+<li>Footer main content</li>
+<li>Resume download button</li>
+</ul>
+</details>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<hr/>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<details>
+<summary>v3.0.2.0 - header</summary>
+<ul>
+<li>Logo</li>
+<li>Home button</li>
+<li>Info button with dialog</li>
+<li>Social buttons without GitHub</li>
+<li>GitHub button</li>
+<li>Bg music button</li>
+</ul>
+</details>
+<hr/>
+v3.0.1.0 - layouts
