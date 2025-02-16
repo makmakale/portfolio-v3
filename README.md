@@ -2,6 +2,15 @@
 <hr/>
 
 <details>
+<summary>v3.2.0.0 - Education page content</summary>
+<ul>
+<li>v3.2.0.1 - small fixes</li>
+</ul>
+</details>
+
+<hr/>
+
+<details>
 <summary>v3.1.0.0 - Home page content</summary>
 <ul>
 <li>Create UI card</li>

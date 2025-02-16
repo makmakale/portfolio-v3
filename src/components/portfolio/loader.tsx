@@ -21,7 +21,7 @@ export default function Loader() {
           repeatDelay: 1,
         }}
         className={cn(
-          "absolute bottom-[4vmax] right-[6vmax]",
+          "absolute bottom-[2vmax] right-[3vmax]",
           "uppercase italic font-dela text-[3vmax] leading-none",
         )}
       >
