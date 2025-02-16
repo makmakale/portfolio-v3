@@ -4,6 +4,7 @@
 <details>
 <summary>v3.2.0.0 - Education page content</summary>
 <ul>
+<li>v3.2.2.0 - Add education places</li>
 <li>v3.2.1.0 - Create carousel</li>
 <li>v3.2.0.1 - small fixes</li>
 </ul>
