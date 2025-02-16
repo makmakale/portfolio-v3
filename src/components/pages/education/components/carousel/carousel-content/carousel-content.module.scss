@@ -1,0 +1,16 @@
+.slideContent {
+  @apply relative flex flex-col w-[6.6rem] h-[5.42rem];
+
+  .slideTitle {
+    @apply font-teko text-[.64rem] font-extrabold leading-tight
+    bg-clip-text text-transparent;
+    background-color: hsl(var(--primary));
+    background-image: var(--footer-background);
+  }
+
+  .slideDescription {
+    @apply grow w-[6.3rem] mt-[.4rem]
+    leading-loose
+    [text-shadow:0_0_0.1rem_black] text-white;
+  }
+}

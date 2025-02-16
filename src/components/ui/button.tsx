@@ -24,6 +24,11 @@ const buttonVariants = cva(
           "h-[.6rem] rounded-full [&_svg]:size-auto text-[0.3rem] text-secondary-foreground hover:text-black",
           "bg-checkers",
         ),
+        readMore: cn(
+          "border-[0.1em] border-border rounded-full",
+          "shadow-[inset_0_0_0_0.05rem] shadow-[#858585]",
+          "font-bold whitespace-nowrap text-[#858585]",
+        ),
       },
       size: {
         default: "px-2 py-1",
