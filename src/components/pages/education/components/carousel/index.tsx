@@ -2,23 +2,20 @@
 
 import * as React from "react";
 import { useEducationStore } from "education/components/carousel/carousel.store";
+import { useTimer } from "@/lib/hooks/useTimer";
 
 export default function Carousel({ children }: { children?: React.ReactNode }) {
-  const { swipe, currentIndex } = useEducationStore();
-  const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { swipe, currentIndex, dialogClosed } = useEducationStore();
+
+  const [pause, resume] = useTimer(() => swipe(1), 6000);
 
   React.useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      swipe(1);
-    }, 6000);
-
-    return () => {
-      if (timerRef.current !== null) {
-        clearTimeout(timerRef.current);
-        timerRef.current = null;
-      }
-    };
-  }, [currentIndex, swipe]);
+    if (!dialogClosed) {
+      pause();
+    } else {
+      resume();
+    }
+  }, [currentIndex, dialogClosed, pause, resume]);
 
   return <div className="relative size-full">{children}</div>;
 }
