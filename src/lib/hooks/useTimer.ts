@@ -4,24 +4,35 @@ import * as React from "react";
 
 export const useTimer = (callback: () => void, delay: number) => {
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [start, setStart] = React.useState(new Date().getTime());
-  const [remaining, setRemaining] = React.useState(delay);
+  const startRef = React.useRef<number>(new Date().getTime());
+  const remainingRef = React.useRef<number>(delay);
+  const remainingHasChangedRef = React.useRef<boolean>(false);
 
   const pause = React.useCallback(() => {
     if (timerRef.current !== null) {
       window.clearTimeout(timerRef.current);
     }
-    setRemaining(new Date().getTime() - start);
-  }, [start]);
+    remainingRef.current = new Date().getTime() - startRef.current;
+    remainingHasChangedRef.current = true;
+  }, []);
 
   const resume = React.useCallback(() => {
-    setStart(new Date().getTime());
+    startRef.current = new Date().getTime();
     if (timerRef.current !== null) {
       window.clearTimeout(timerRef.current);
     }
-    timerRef.current = setTimeout(callback, remaining);
-    setRemaining(delay);
-  }, [callback, remaining, delay]);
+    timerRef.current = setTimeout(callback, remainingRef.current);
+    remainingHasChangedRef.current = false;
+  }, [callback]);
+
+  if (!remainingHasChangedRef.current && remainingRef.current < delay) {
+    remainingRef.current = delay;
+  }
+
+  console.group("useTimer");
+  console.log("start", startRef.current);
+  console.log("remaining", remainingRef.current);
+  console.groupEnd();
 
   React.useEffect(() => {
     return () => {
