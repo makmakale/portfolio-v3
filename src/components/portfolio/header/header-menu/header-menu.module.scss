@@ -10,9 +10,13 @@
   border-radius: 9999px;
   height: .6rem;
   background: repeating-conic-gradient(#101010 0% 25%, #000000 0% 50%);
-  background-size: 0.1rem 0.1rem;
+  background-size: 0.08rem 0.08rem;
   transition-property: color, transform;
   z-index: 0;
+
+  &:hover svg{
+    filter:drop-shadow(0 0 0.05rem rgba(255,255,255,0.5));
+  }
 
   &.contactMe {
     padding-inline: .3rem;

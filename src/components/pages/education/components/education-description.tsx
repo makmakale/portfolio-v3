@@ -1,19 +1,24 @@
 import { EducationType } from "education/education.data";
 import { getDatePeriod } from "@/lib/utils";
 import { CarouselContentDescription } from "education/components/carousel/carousel-content";
+import * as React from "react";
 
 type EducationDescriptionProps = Pick<
   EducationType,
   "period" | "specialty" | "location"
 >;
 
+interface IEducationDescriptionProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  data: EducationDescriptionProps;
+}
+
 export default function EducationDescription({
   data,
-}: {
-  data: EducationDescriptionProps;
-}) {
+  className,
+}: IEducationDescriptionProps) {
   return (
-    <CarouselContentDescription>
+    <CarouselContentDescription className={className}>
       <p>
         <span className={"font-semibold"}>Period</span>:{" "}
         {getDatePeriod(data.period.startDate, data.period.endDate)}

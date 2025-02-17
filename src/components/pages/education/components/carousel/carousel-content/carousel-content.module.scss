@@ -10,7 +10,7 @@
 
   .slideDescription {
     @apply grow w-[6.3rem] mt-[.4rem]
-    leading-loose
+    leading-loose space-y-0.5
     [text-shadow:0_0_0.1rem_black] text-white;
   }
 }

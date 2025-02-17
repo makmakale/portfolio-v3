@@ -7,7 +7,7 @@ export const useCarouselTimer = (delay: number) => {
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const startRef = React.useRef<number>(new Date().getTime());
   const remainingRef = React.useRef<number>(delay);
-  const { swipe, dialogClosed, currentIndex } = useEducationStore();
+  const { swipe, dialogOpen, currentIndex } = useEducationStore();
 
   const pause = React.useCallback(() => {
     if (timerRef.current !== null) {
@@ -27,10 +27,10 @@ export const useCarouselTimer = (delay: number) => {
   }, []);
 
   React.useEffect(() => {
-    if (dialogClosed) {
-      play(remainingRef.current);
-    } else {
+    if (dialogOpen) {
       pause();
+    } else {
+      play(remainingRef.current);
     }
 
     return () => {
@@ -41,5 +41,5 @@ export const useCarouselTimer = (delay: number) => {
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, dialogClosed]);
+  }, [currentIndex, dialogOpen]);
 };

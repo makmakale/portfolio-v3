@@ -1,0 +1,10 @@
+.dialogContent{
+
+  .dialogDescription{
+    @apply relative grid grid-cols-[4rem_1fr] gap-4 h-full overflow-hidden;
+
+    .innerContent{
+      @apply bg-black rounded-[.2rem] p-2 text-[.16rem] h-full overflow-hidden;
+    }
+  }
+}

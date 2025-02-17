@@ -14,10 +14,12 @@ export default function CarouselContent() {
   const { currentItem } = useEducationStore();
   const Comp = currentItem?.content || "div";
 
+  if (!currentItem) return null;
+
   return (
     <div className={css.slideContent}>
-      <AnimatePresence mode="wait">
-        <Comp key={currentItem ? currentItem.id : "empty"} />
+      <AnimatePresence key={currentItem.id} mode="wait">
+        <Comp />
       </AnimatePresence>
     </div>
   );

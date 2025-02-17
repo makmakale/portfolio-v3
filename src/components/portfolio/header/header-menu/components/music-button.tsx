@@ -36,7 +36,7 @@ export default function MusicButton() {
         onClick={handleClick}
       >
         {!isPlaying && (
-          <div className="absolute w-full h-[.08rem] rotate-45 bg-secondary" />
+          <div className="absolute w-full h-[.08rem] rotate-45 bg-secondary z-10" />
         )}
         <FaMusic />
       </button>

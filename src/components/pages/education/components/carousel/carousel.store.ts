@@ -10,8 +10,8 @@ interface EducationState {
   currentItem: EducationType | null;
   swipe: (direction: SwipeDirectionType) => void;
   swipeTo: (index: number) => void;
-  dialogClosed: boolean;
-  toggleDialog: () => void;
+  dialogOpen: boolean;
+  toggleDialog: (open: boolean) => void;
 }
 
 const educationStore = create<EducationState>()(
@@ -39,8 +39,11 @@ const educationStore = create<EducationState>()(
         });
       }
     },
-    dialogClosed: true,
-    toggleDialog: () => set({ dialogClosed: !get().dialogClosed }),
+    dialogOpen: false,
+    toggleDialog: (dialogOpen) => {
+      console.log("toggleDialog:dialogOpen", dialogOpen);
+      set({ dialogOpen });
+    },
   })),
 );
 

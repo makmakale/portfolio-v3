@@ -19,10 +19,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         social: cn(
-          "border-[0.1em] border-black",
-          "shadow-[inset_0_0_0_0.14em] shadow-secondary",
-          "h-[.6rem] rounded-full [&_svg]:size-auto text-[0.3rem] text-secondary-foreground hover:text-black",
-          "bg-checkers",
+          "bg-checkers border-[0.1em] border-black",
+          "shadow-[inset_0_0_0_0.04rem] shadow-secondary",
+          "h-[.6rem] rounded-full [&_svg]:size-auto text-[0.3rem] text-secondary-foreground",
+          "hover:text-white",
         ),
         readMore: cn(
           "border-[0.1em] border-border rounded-full",
