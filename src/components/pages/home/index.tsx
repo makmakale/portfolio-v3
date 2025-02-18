@@ -13,7 +13,7 @@ import css from "./home.module.scss";
 
 export default function Home() {
   return (
-    <HomeAnimation delay={2}>
+    <HomeAnimation delay={1.5}>
       <div className={css.homeContainer}>
         <Card>
           <CardHeader>

@@ -1,0 +1,55 @@
+.buttonsGroup {
+  @apply relative rounded-full p-[0.02rem]
+  bg-gradient-to-b from-neutral-800 to-neutral-700
+  flex;
+
+  .buttonDefault {
+    @apply relative w-[.99rem] h-[.67rem] aspect-[99/67]
+    bg-no-repeat bg-cover bg-center
+    flex justify-center items-center
+    text-[.56rem]
+    [&>svg]:fill-secondary [&>svg]:stroke-1 [&>svg]:stroke-secondary;
+
+    &.previous {
+      @apply bg-[url('/images/chevron-left.png')] pr-[.1rem];
+    }
+
+    &.next {
+      @apply bg-[url('/images/chevron-right.png')] -ml-[.12rem] pl-[.1rem];
+    }
+  }
+}
+
+@media (hover: hover) {
+  .buttonDefault {
+    &.previous:hover,
+    &.next:hover {
+      @apply [&>svg]:fill-primary [&>svg]:stroke-primary;
+    }
+
+    &.previous:hover {
+      @apply bg-[url('/images/chevron-left-hover.png')];
+    }
+
+    &.next:hover {
+      @apply bg-[url('/images/chevron-right-hover.png')];
+    }
+  }
+}
+
+@media (hover: none) {
+  .buttonDefault {
+    &.previous:active,
+    &.next:active {
+      @apply [&>svg]:fill-primary [&>svg]:stroke-primary;
+    }
+
+    &.previous:active {
+      @apply bg-[url('/images/chevron-left-hover.png')];
+    }
+
+    &.next:active {
+      @apply bg-[url('/images/chevron-right-hover.png')];
+    }
+  }
+}

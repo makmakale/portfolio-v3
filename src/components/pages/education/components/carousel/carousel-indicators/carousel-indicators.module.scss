@@ -1,0 +1,9 @@
+.indicatorsGroup {
+  @apply flex gap-1.5;
+
+  .indicator {
+    @apply bg-secondary-foreground
+    -skew-x-12 w-[.14rem] h-[.2rem] rounded-[.02rem]
+    shadow-[0.02rem_0.02rem_0.04rem] shadow-black/20;
+  }
+}

@@ -60,13 +60,13 @@ export default function Layout({ children }: React.PropsWithChildren) {
 
   return (
     <>
+      {children}
+
       <div className="fixed-section">
         <Header />
         <Navbar />
         <Footer />
       </div>
-
-      {children}
     </>
   );
 }
