@@ -43,8 +43,8 @@ export const EducationPage = {
   id: "education",
   href: "/education",
   title: "Education",
-  primaryColor: "43.83 91.26% 64.12%",
-  footerBackground: "linear-gradient(150deg, #f7ca50 25%, #d7871e 100%)",
+  primaryColor: "50 85% 50%",
+  footerBackground: "linear-gradient(150deg, #F2B11D 0%, #FDE278 83%)",
   bgUrl: EducationBgImage.src,
 };
 

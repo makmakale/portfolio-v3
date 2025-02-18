@@ -1,0 +1,33 @@
+.screen {
+  @apply absolute w-[9.32rem] h-[5.42rem] right-0 top-0
+  border-[0.05rem] border-border bg-neutral-600 rounded-[.2rem]
+  aspect-[932/542] p-3
+  flex flex-col gap-1.5;
+
+  &::before {
+    content: '';
+    @apply absolute inset-0 rounded-[.18rem]
+    shadow-[inset_0_0_0_0.03rem_rgba(255,255,255,0.1)];
+  }
+
+  .innerScreen {
+    @apply relative size-full rounded-[.1rem] p-[.1rem] grow
+    bg-gradient-to-b from-neutral-700 to-neutral-500;
+
+    .blankScreen {
+      @apply relative size-full border-[0.02rem] border-border overflow-hidden
+      flex items-center;
+
+      &::after{
+        content:'';
+        @apply absolute inset-0;
+        background-image: radial-gradient(circle, transparent 0%, transparent 85%, rgba(0,0,0,.5) 100%);
+      }
+
+      > div {
+        flex: 1 0 auto;
+        @apply absolute left-0 top-0;
+      }
+    }
+  }
+}

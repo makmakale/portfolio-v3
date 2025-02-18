@@ -15,11 +15,11 @@
   margin-top: -.72rem;
   background-clip: text;
   color: transparent;
-  background-size: .06rem .06rem;
+  background-size: .04rem .04rem;
   background-image: radial-gradient(
-                  hsl(var(--primary)),
-                  rgba(255, 255, 255, .1) 0.01rem,
-                  rgba(255, 255, 255, .1)
+                  transparent,
+                  rgba(255, 255, 255, .2) 0.02rem,
+                  rgba(255, 255, 255, .2)
   );
 }
 
