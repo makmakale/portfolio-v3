@@ -1,5 +1,4 @@
 import { EducationType } from "education/education.data";
-import dynamic from "next/dynamic";
 import { EducationIds } from "education/education.constants";
 
 import iTechArtImg from "@/assets/images/education/itechart.jpg";
@@ -16,7 +15,4 @@ export const iTechArtStudentsLab: EducationType = {
     text: "Full Stack JS",
   },
   certificate: certificate.src,
-  content: dynamic(
-    () => import("education/places/iTechArt/itechart.component"),
-  ),
 };

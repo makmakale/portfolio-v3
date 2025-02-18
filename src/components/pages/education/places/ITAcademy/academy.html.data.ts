@@ -1,5 +1,4 @@
 import { EducationType } from "education/education.data";
-import dynamic from "next/dynamic";
 import { EducationIds } from "education/education.constants";
 
 import ItAcademyImg from "@/assets/images/education/it-academy.jpg";
@@ -16,7 +15,4 @@ export const itAcademyHTMLCourse: EducationType = {
     text: "Website development with HTML, CSS & JavaScript",
   },
   certificate: certificate.src,
-  content: dynamic(
-    () => import("education/places/ITAcademy/academy.html.component"),
-  ),
 };

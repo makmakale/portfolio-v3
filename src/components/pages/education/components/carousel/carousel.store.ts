@@ -40,10 +40,7 @@ const educationStore = create<EducationState>()(
       }
     },
     dialogOpen: false,
-    toggleDialog: (dialogOpen) => {
-      console.log("toggleDialog:dialogOpen", dialogOpen);
-      set({ dialogOpen });
-    },
+    toggleDialog: (dialogOpen) => set({ dialogOpen }),
   })),
 );
 

@@ -1,5 +1,4 @@
 import { EducationType } from "education/education.data";
-import dynamic from "next/dynamic";
 import { EducationIds } from "education/education.constants";
 
 import IPPImg from "@/assets/images/education/ipp.jpg";
@@ -16,5 +15,4 @@ export const ipp: EducationType = {
     text: "Economics and Business Management",
   },
   certificate: certificate.src,
-  content: dynamic(() => import("education/places/IPP/ipp.component")),
 };

@@ -4,6 +4,7 @@
 <details>
 <summary>v3.2.0.0 - Education page content</summary>
 <ul>
+<li>v3.2.3.3 - Moved unnecessary components to Education Content</li>
 <li>v3.2.3.2 - Add Education details page/dialog</li>
 <li>v3.2.3.1 - Update timeout for opened dialog</li>
 <li>v3.2.3.0 - Add controllable timeout for carousel</li>

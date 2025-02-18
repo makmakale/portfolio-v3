@@ -4,7 +4,6 @@ import { iTechArtStudentsLab } from "education/places/iTechArt/itechart.data";
 import { itAcademyJSCourse } from "education/places/ITAcademy/academy.js.data";
 import { itAcademyHTMLCourse } from "education/places/ITAcademy/academy.html.data";
 import { ipp } from "education/places/IPP/ipp.data";
-import { ComponentType } from "react";
 import { EducationIds } from "education/education.constants";
 
 export type EducationType = {
@@ -15,7 +14,6 @@ export type EducationType = {
   location: string;
   specialty: OptionType;
   certificate?: string;
-  content: ComponentType<unknown>;
 };
 
 export const educationData: EducationType[] = [

@@ -9,17 +9,26 @@ import {
   animateTitle,
 } from "education/components/carousel/carousel-content/carousel-content.constants";
 import css from "education/components/carousel/carousel-content/carousel-content.module.scss";
+import EducationPreview from "education/components/education-preview";
+import EducationDescription from "education/components/education-description";
 
 export default function CarouselContent() {
   const { currentItem } = useEducationStore();
-  const Comp = currentItem?.content || "div";
-
   if (!currentItem) return null;
 
   return (
     <div className={css.slideContent}>
-      <AnimatePresence key={currentItem.id} mode="wait">
-        <Comp />
+      <AnimatePresence mode="wait">
+        <>
+          <CarouselContentTitle key={`title-${currentItem.id}`}>
+            {currentItem.title}
+          </CarouselContentTitle>
+          <EducationDescription
+            key={`description-${currentItem.id}`}
+            data={currentItem}
+          />
+          <EducationPreview key={`dialog-${currentItem.id}`} />
+        </>
       </AnimatePresence>
     </div>
   );

@@ -35,28 +35,42 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 const DialogContent = React.forwardRef<
   React.ComponentRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <DialogPortal container={document.getElementById("layout")}>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(
-        "absolute inset-0 z-[90] grid grid-rows-[1rem_auto_1rem]",
-        "duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-bottom-[48%]",
-        "overflow-hidden",
-        className,
-      )}
-      {...props}
-      style={
-        {
-          "--primary": "73 100% 35%",
-        } as CSSProperties
-      }
-    >
-      {children}
-    </DialogPrimitive.Content>
-  </DialogPortal>
-));
+>(({ className, children, ...props }, ref) => {
+  const [container, setContainer] = React.useState<HTMLElement>();
+
+  React.useEffect(() => {
+    const c = document.getElementById("layout");
+    if (c) {
+      setContainer(c);
+    }
+  }, []);
+
+  if (!container) return null;
+
+  return (
+    <DialogPortal container={container}>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        aria-describedby={undefined}
+        className={cn(
+          "absolute inset-0 z-[90] grid grid-rows-[1rem_auto_1rem]",
+          "duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-bottom-[48%]",
+          "overflow-hidden",
+          className,
+        )}
+        {...props}
+        style={
+          {
+            "--primary": "73 100% 35%",
+          } as CSSProperties
+        }
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  );
+});
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const DialogHeader = ({

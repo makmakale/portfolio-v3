@@ -10,9 +10,11 @@ import { useEducationStore } from "education/components/carousel/carousel.store"
 
 export default function EducationPreviewButton() {
   const { currentItem } = useEducationStore();
+  if (!currentItem?.certificate) return null;
+
   return (
     <motion.div
-      key={currentItem?.id}
+      key={currentItem.id}
       {...animate(slideInOut)}
       className="absolute bottom-0"
     >
