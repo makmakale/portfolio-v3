@@ -1,22 +1,22 @@
 "use client";
 
-import * as React from "react";
-import { InnerTabsList, TabsTrigger } from "work/components/ui/tabs";
+import { InnerTabsList, InnerTabsTrigger } from "work/components/ui/tabs";
+import { useWorkTabs } from "work/lib/work.store";
+import { TWorkDetails } from "work/lib/work.data";
 
 export default function DetailsList() {
-  const [activeValue, setActiveValue] = React.useState("0");
+  const { activeWork } = useWorkTabs();
+
+  const tabs: TWorkDetails[] = activeWork.children
+    ? [{ id: "about", title: "About" }, ...activeWork.children]
+    : [{ id: "about", title: "About" }];
 
   return (
     <InnerTabsList>
-      {Array.from({ length: 15 }).map((_, i) => (
-        <TabsTrigger
-          key={`company-${i}`}
-          value={i.toString()}
-          activeValue={activeValue}
-          onClick={() => setActiveValue(i.toString())}
-        >
-          Detail {i + 1}
-        </TabsTrigger>
+      {tabs.map((tab) => (
+        <InnerTabsTrigger key={`company-${tab.id}`} value={tab.id}>
+          {tab.title}
+        </InnerTabsTrigger>
       ))}
     </InnerTabsList>
   );

@@ -10,7 +10,16 @@ interface WorkState {
   activeWorkTab: WorkIds;
   setActiveWorkTab: (workId: WorkIds) => void;
   activeWork: TWorkCompany;
+  // details
+  activeDetailTab: string;
+  setActiveDetailTab: (workId: string) => void;
+  // pagination
+  page: number;
+  setPage: (page: number) => void;
 }
+
+export const DEFAULT_DETAIL_TAB = "about";
+const DEFAULT_DETAIL_PAGE = 1;
 
 const workTabs = create<WorkState>()(
   devtools((set, getState) => ({
@@ -21,9 +30,21 @@ const workTabs = create<WorkState>()(
       set({
         activeWorkTab: tab,
         activeWork: getState().data.find(({ id }) => id === tab),
+        activeDetailTab: DEFAULT_DETAIL_TAB,
       });
     },
     activeWork: workList[0],
+    // details
+    activeDetailTab: DEFAULT_DETAIL_TAB,
+    setActiveDetailTab: (tab) => {
+      set({
+        activeDetailTab: tab,
+        page: DEFAULT_DETAIL_PAGE,
+      });
+    },
+    // pagination
+    page: DEFAULT_DETAIL_PAGE,
+    setPage: (page: number) => set({ page }),
   })),
 );
 

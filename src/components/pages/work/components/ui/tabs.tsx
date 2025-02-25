@@ -173,4 +173,31 @@ const InnerTabsList = React.forwardRef<
 ));
 InnerTabsList.displayName = "InnerTabsList";
 
-export { Tabs, TabsList, TabsTrigger, TabsContent, InnerTabsList };
+const InnerTabsTrigger = React.forwardRef<
+  HTMLButtonElement,
+  React.HTMLAttributes<HTMLButtonElement> & {
+    value: string;
+  }
+>(({ value, ...props }, ref) => {
+  const { activeDetailTab, setActiveDetailTab } = useWorkTabs();
+
+  return (
+    <Trigger
+      ref={ref}
+      value={value}
+      {...props}
+      activeValue={activeDetailTab}
+      onClick={() => setActiveDetailTab(value)}
+    />
+  );
+});
+InnerTabsTrigger.displayName = "InnerTabsTrigger";
+
+export {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  InnerTabsList,
+  InnerTabsTrigger,
+};
