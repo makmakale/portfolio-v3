@@ -1,3 +1,5 @@
+import ComingSoon from "@/components/portfolio/coming-soon";
+
 export default function Page() {
-  return <div>Work Page</div>;
+  return <ComingSoon />;
 }
