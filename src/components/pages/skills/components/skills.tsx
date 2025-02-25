@@ -28,8 +28,8 @@ SkillList.displayName = "SkillList";
 
 const SkillListItem = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & MotionProps & { disabled?: boolean }
->(({ disabled, className, children, ...props }, ref) => {
+  React.HTMLAttributes<HTMLDivElement> & MotionProps
+>(({ className, children, ...props }, ref) => {
   return (
     <div className="p-[0.06rem] aspect-[3/4] -mb-1">
       <motion.div
