@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardSubHeader,
   CardTitle,
-} from "./components/ui/card";
+} from "@/components/ui/card";
 import HomeAside from "./components/aside";
 import HomeContent from "./components/content";
 import { PROFILE } from "./home.constants";

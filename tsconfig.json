@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "education/*": ["./src/components/pages/education/*"]
+      "education/*": ["./src/components/pages/education/*"],
+      "skills/*": ["./src/components/pages/skills/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

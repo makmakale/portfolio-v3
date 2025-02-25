@@ -4,7 +4,7 @@ import {
   TimePhotoCardImageBox,
   TimePhotoCardTimeBox,
   TimePhotoCardTimeContent,
-} from "../ui/time-photo-card";
+} from "../time-photo-card";
 import Image from "next/image";
 
 export default function HomeAside() {
