@@ -2,6 +2,15 @@
 <hr/>
 
 <details>
+<summary>v3.3.0.0 - Skills page content</summary>
+<ul>
+<li>v3.3.1.0 - Add skills params, images, default page component.</li>
+</ul>
+</details>
+
+<hr/>
+
+<details>
 <summary>v3.2.0.0 - Education page content</summary>
 <ul>
 <li>v3.2.3.3 - Moved unnecessary components to Education Content</li>
