@@ -40,11 +40,10 @@ export function getDateRange(startDate: string, endDate: string): string {
   };
 
   let years = differenceInYears(period.endDate, period.startDate);
-  let months =
-    differenceInMonths(
-      period.endDate,
-      addMonths(period.startDate, years * 12),
-    ) + 1;
+  let months = differenceInMonths(
+    period.endDate,
+    addMonths(period.startDate, years * 12),
+  );
 
   if (months === 12) {
     months = 0;

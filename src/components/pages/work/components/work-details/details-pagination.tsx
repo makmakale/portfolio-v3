@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { useWorkTabs } from "work/lib/work.store";
 
 import { Button } from "@/components/ui/button";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
@@ -10,8 +11,10 @@ const convertToString = (value: number): string =>
   value.toString().padStart(2, "0");
 
 export default function DetailsPagination() {
-  const [page, setPage] = React.useState(1);
-  const total = 1;
+  const { activeWork, activeDetailTab, page, setPage } = useWorkTabs();
+
+  const detailsData = activeWork.tabs.find(({ id }) => id === activeDetailTab);
+  const total = detailsData?.children?.length || 0;
 
   const handlePrevPage = () => {
     const newPage = page - 1;
@@ -22,14 +25,12 @@ export default function DetailsPagination() {
     setPage(newPage > total ? total : newPage);
   };
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   if (total === 0) return null;
 
   return (
     <div
       className={cn(
-        "absolute bottom-[0.25rem] left-1/2",
+        "absolute bottom-[0.2rem] left-1/2",
         "border-[0.04rem] border-black rounded-full",
         "bg-[#323232] h-[0.6rem] w-[3rem]",
         "flex justify-between items-center gap-2",
@@ -42,7 +43,7 @@ export default function DetailsPagination() {
       >
         <HiChevronLeft className="stroke-2" />
       </Button>
-      <div className="font-semibold font-dela">
+      <div className="font-teko font-extrabold text-[.27rem]">
         {convertToString(page)} / {convertToString(total)}
       </div>
       <Button

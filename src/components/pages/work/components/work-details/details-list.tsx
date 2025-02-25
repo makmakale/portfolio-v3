@@ -1,15 +1,16 @@
 "use client";
 
-import { InnerTabsList, InnerTabsTrigger } from "work/components/ui/tabs";
+import { TWorkDetails } from "work/lib/work.types";
 import { useWorkTabs } from "work/lib/work.store";
-import { TWorkDetails } from "work/lib/work.data";
+
+import { InnerTabsList, InnerTabsTrigger } from "work/components/ui/tabs";
+
+type TDetailsTabs = Pick<TWorkDetails, "id" | "title">[];
 
 export default function DetailsList() {
   const { activeWork } = useWorkTabs();
 
-  const tabs: TWorkDetails[] = activeWork.children
-    ? [{ id: "about", title: "About" }, ...activeWork.children]
-    : [{ id: "about", title: "About" }];
+  const tabs: TDetailsTabs = activeWork.tabs;
 
   return (
     <InnerTabsList>
