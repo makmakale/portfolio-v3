@@ -8,6 +8,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  max-height: 100%;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -90,6 +92,8 @@
   inset -0.02rem -0.02rem 0.04rem rgba(255, 255, 255, 0.4);
   padding: 0.1rem;
   padding-bottom: 0.24rem;
+  flex-grow: 1;
+  overflow: hidden;
 
   &::after {
     position: absolute;
@@ -111,5 +115,4 @@
   width: 100%;
   height: 100%;
   padding: 0.1rem;
-  overflow: hidden;
 }

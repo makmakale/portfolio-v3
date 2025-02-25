@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import { PROFILE } from "@/components/pages/home/home.constants";
 
-import { CardInputField } from "@/components/pages/home/components/ui/card";
+import { CardInputField } from "@/components/ui/card";
 import { FaFireAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { BsCake2 } from "react-icons/bs";
 
