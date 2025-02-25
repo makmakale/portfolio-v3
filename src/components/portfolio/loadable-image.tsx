@@ -34,6 +34,7 @@ export default function LoadableImage({ src, alt, ...props }: ImageProps) {
         alt={alt}
         {...props}
         onLoad={onLoad}
+        onError={onLoad}
         loading="lazy"
         fill
         className={cn("absolute inset-0 z-0 object-cover bg-center")}
