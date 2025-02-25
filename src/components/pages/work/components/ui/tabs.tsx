@@ -146,4 +146,22 @@ const TabsContent = React.forwardRef<
 ));
 TabsContent.displayName = "TabsContent";
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+const InnerTabsList = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div className={cn("rounded-[.2rem] h-full overflow-hidden")}>
+    <Scrollable className="p-0 scroll-hidden">
+      <div
+        ref={ref}
+        className={cn("flex flex-col gap-0.5", className)}
+        {...props}
+      >
+        {children}
+      </div>
+    </Scrollable>
+  </div>
+));
+InnerTabsList.displayName = "InnerTabsList";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent, InnerTabsList };
