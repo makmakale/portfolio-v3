@@ -1,5 +1,5 @@
-import ComingSoon from "@/components/portfolio/coming-soon";
+import Work from "@/components/pages/work";
 
 export default function Page() {
-  return <ComingSoon />;
+  return <Work />;
 }

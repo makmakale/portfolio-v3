@@ -2,6 +2,15 @@
 <hr/>
 
 <details>
+<summary>v3.4.0.0 - Work page content</summary>
+<ul>
+<li>v3.4.1.1 - Add tabs components for work list & details.</li>
+</ul>
+</details>
+
+<hr/>
+
+<details>
 <summary>v3.3.0.0 - Skills page content</summary>
 <ul>
 <li>v3.3.3.0 - Add default component for non-content page.</li>
