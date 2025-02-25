@@ -12,6 +12,7 @@ export default class SkillFactory {
     id: SkillIds.empty,
     title: "empty",
     image: noImage.src,
+    level: 0,
   };
 
   constructor(id: SkillIds) {

@@ -4,7 +4,7 @@
 <details>
 <summary>v3.3.0.0 - Skills page content</summary>
 <ul>
-<li>v3.3.2.4 - View skills items.</li>
+<li>v3.3.2.5 - View skills items.</li>
 <li>v3.3.1.0 - Add skills params, images, default page component.</li>
 </ul>
 </details>
