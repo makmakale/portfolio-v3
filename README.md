@@ -4,6 +4,9 @@
 <details>
 <summary>v3.4.0.0 - Work page content</summary>
 <ul>
+<li>v3.4.3.3 - Add details content to work store.</li>
+<li>v3.4.3.2 - Add details to work store.</li>
+<li>v3.4.3.1 - Add zustand work store.</li>
 <li>v3.4.2.1 - Add preview for work details.</li>
 <li>v3.4.1.1 - Add tabs components for work list & details.</li>
 </ul>

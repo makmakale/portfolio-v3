@@ -4,6 +4,8 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 import Scrollable from "@/components/ui/scrollable";
+import { useWorkTabs } from "work/lib/work.store";
+import { WorkIds } from "work/lib/work.constants";
 
 const Tabs = React.forwardRef<
   HTMLDivElement,
@@ -105,12 +107,19 @@ Trigger.displayName = "Trigger";
 const TabsTrigger = React.forwardRef<
   HTMLButtonElement,
   React.HTMLAttributes<HTMLButtonElement> & {
-    value: string;
-    activeValue: string;
+    value: WorkIds;
   }
->(({ value, activeValue, ...props }, ref) => {
+>(({ value, ...props }, ref) => {
+  const { activeWorkTab, setActiveWorkTab } = useWorkTabs();
+
   return (
-    <Trigger ref={ref} value={value} activeValue={activeValue} {...props} />
+    <Trigger
+      ref={ref}
+      value={value}
+      {...props}
+      activeValue={activeWorkTab}
+      onClick={() => setActiveWorkTab(value)}
+    />
   );
 });
 TabsTrigger.displayName = "TabsTrigger";
