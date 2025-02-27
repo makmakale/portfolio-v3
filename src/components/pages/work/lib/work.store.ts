@@ -42,8 +42,12 @@ const workTabs = create<WorkState>()(
     activeDetail: workList[0].tabs[0],
     activeDetailTab: workList[0].tabs[0].id,
     setActiveDetailTab: (detailId) => {
-      const { activeWork, page } = getState();
-      const activeDetail = findActiveDetail(activeWork.tabs, detailId, page);
+      const { activeWork } = getState();
+      const activeDetail = findActiveDetail(
+        activeWork.tabs,
+        detailId,
+        DEFAULT_DETAIL_PAGE,
+      );
 
       set({
         activeDetailTab: detailId,

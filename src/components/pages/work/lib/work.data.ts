@@ -1,4 +1,6 @@
-import { promburvod } from "work/companies/pbv";
 import { TWorkCompany } from "work/lib/work.types";
 
-export const workList: TWorkCompany[] = [promburvod];
+import { iTechArtGroup } from "work/companies/itechart";
+import { promburvod } from "work/companies/pbv";
+
+export const workList: TWorkCompany[] = [iTechArtGroup, promburvod];

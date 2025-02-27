@@ -4,6 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion, MotionProps } from "motion/react";
 import Image, { ImageProps } from "next/image";
+import { DEFAULT_COLUMNS } from "skills/lib/skill.data";
 
 const animation = {
   initial: { top: "100%" },
@@ -12,13 +13,14 @@ const animation = {
 
 const SkillList = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, children, ...props }, ref) => {
+  React.HTMLAttributes<HTMLDivElement> & { columns?: number }
+>(({ columns = DEFAULT_COLUMNS, className, children, ...props }, ref) => {
   return (
     <div
       ref={ref}
       {...props}
-      className={cn("relative grid grid-cols-6", className)}
+      className={cn("relative grid", className)}
+      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
     >
       {children}
     </div>

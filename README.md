@@ -7,9 +7,12 @@
 <ul>
     <li>v3.4.4.0 - Fill with data.</li>
         <ul>
+            <li>v3.4.8.0 - iTechArt Group.</li>
+            <li>v3.4.7.0 - Klika Tech.</li>
+            <li>v3.4.6.0 - iTechArt Group.</li>
             <li>v3.4.5.0 - Zavod Promburvod.</li>
         </ul>
-    <li>v3.4.3.43 - Add details content to work store.</li>
+    <li>v3.4.3.0 - Add details content to work store.</li>
     <li>v3.4.3.2 - Add details to work store.</li>
     <li>v3.4.3.1 - Add zustand work store.</li>
     <li>v3.4.2.1 - Add preview for work details.</li>
