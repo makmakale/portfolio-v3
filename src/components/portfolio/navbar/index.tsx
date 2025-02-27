@@ -23,6 +23,7 @@ export default function Navbar() {
           href={page.href}
           legacyBehavior
           passHref
+          prefetch
         >
           <NavbarItem>
             <NavbarItemTitle>
