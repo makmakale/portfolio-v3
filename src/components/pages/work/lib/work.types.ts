@@ -31,3 +31,10 @@ export type TWorkDetailsData = {
   id: string;
   component: FC;
 };
+
+export type TTeamList = {
+  id: number;
+  title: string;
+  min: number;
+  max?: number;
+};

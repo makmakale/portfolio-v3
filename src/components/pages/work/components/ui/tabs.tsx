@@ -89,7 +89,7 @@ const Trigger = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        "relative inline-flex transition-all px-3 py-2 pt-[0.24rem]",
+        "relative inline-flex items-center transition-all h-[.68rem] px-1",
         "font-extrabold italic line-clamp-2 leading-none",
         "after:absolute after:w-full after:h-[0.04rem] after:bg-white/5 after:left-0 after:top-0",
         "rounded-[.1rem]",

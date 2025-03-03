@@ -1,0 +1,86 @@
+.teamList {
+  @apply
+  flex
+  flex-col
+  gap-[.1rem];
+
+  .listItem {
+    @apply
+    relative
+    h-[1rem]
+    rounded-[.06rem]
+    bg-gradient-to-tr from-neutral-700 from-50% to-neutral-400
+    text-muted-foreground;
+
+    &:last-child .chainWrapper {
+      @apply hidden;
+    }
+
+    .chainWrapper {
+      @apply
+      absolute
+      right-[0.1rem]
+      bottom-[-.2rem]
+      size-[0.3rem]
+      flex
+      gap-[.05rem]
+      justify-center
+      select-none
+      z-10;
+
+      .chains {
+        @apply
+        w-[.06rem]
+        h-full
+        rounded-full
+        bg-gradient-to-b from-[#000] via-[#888] to-[#000]
+        shadow-[0_0_0.04rem] shadow-black;
+      }
+    }
+
+    .contentWrapper {
+      @apply
+      relative
+      z-[1]
+      overflow-hidden
+      grid
+      grid-cols-[1fr_auto]
+      py-[.2rem]
+      px-[.25rem]
+      items-center;
+
+      .iconWrapper {
+        @apply
+        absolute
+        -bottom-[0.15rem]
+        -left-[0.15rem]
+        aspect-square
+        h-full;
+
+        .icon {
+          @apply absolute size-[1rem] opacity-25;
+        }
+      }
+
+      .content {
+        @apply
+        relative
+        font-semibold
+        text-transparent
+        bg-clip-text bg-gradient-to-b from-foreground to-secondary-foreground;
+      }
+
+      .count {
+        @apply
+        border-[.06rem]
+        border-black
+        rounded-[.1rem]
+        bg-primary-foreground
+        grid place-items-center
+        aspect-square
+        size-[.6rem]
+        font-dela;
+      }
+    }
+  }
+}

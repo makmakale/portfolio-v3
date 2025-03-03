@@ -15,7 +15,7 @@ export default function DetailsContent() {
         {activeWork.title}
       </div>
 
-      <div className="grow overflow-hidden">
+      <div className="grow pb-1 overflow-hidden">
         <Scrollable className="space-y-1" scrollResetValue={scrollResetValue}>
           <Comp />
         </Scrollable>

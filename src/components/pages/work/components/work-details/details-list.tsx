@@ -15,7 +15,7 @@ export default function DetailsList() {
   return (
     <InnerTabsList>
       {tabs.map((tab) => (
-        <InnerTabsTrigger key={`company-${tab.id}`} value={tab.id}>
+        <InnerTabsTrigger key={`details-${tab.id}`} value={tab.id}>
           {tab.title}
         </InnerTabsTrigger>
       ))}
