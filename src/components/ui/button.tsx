@@ -29,6 +29,12 @@ const buttonVariants = cva(
           "shadow-[inset_0_0_0_0.05rem] shadow-[#858585]",
           "font-bold whitespace-nowrap text-[#858585]",
         ),
+        pagination: cn(
+          "ring-[0.1em] ring-border",
+          "shadow-[inset_0_0_0_0.14em] shadow-secondary",
+          "w-[0.8rem] h-full rounded-full [&_svg]:size-[.4rem] text-[0.3rem]",
+          "bg-checkers text-secondary-foreground hover:text-white",
+        ),
       },
       size: {
         default: "px-2 py-1",

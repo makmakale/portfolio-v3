@@ -10,17 +10,22 @@ export type SkillType = {
   level: SkillLevel;
 };
 
-const generateSkills = () => {
-  const data: (SkillType | null)[] = [];
+export const DEFAULT_COLUMNS = 6;
 
-  Object.keys(SkillIds).forEach((key) => {
+export const generateSkills = (
+  cols: number = DEFAULT_COLUMNS,
+  filter?: SkillIds[],
+) => {
+  const data: (SkillType | null)[] = [];
+  const ids = filter ? filter : Object.keys(SkillIds);
+
+  ids.forEach((key) => {
     if (!isNaN(Number(key)) && Number(key) > 0) {
       data.push(new SkillFactory(Number(key)).getData());
     }
   });
 
-  const DEFAULT_COLUMNS = 6;
-  const notEnoughCols = DEFAULT_COLUMNS - (data.length % DEFAULT_COLUMNS);
+  const notEnoughCols = cols - (data.length % cols);
   const size = data.length + notEnoughCols;
   const emptyArray = new Array(size).fill(null);
 

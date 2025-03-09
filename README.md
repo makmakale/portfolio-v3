@@ -1,12 +1,38 @@
 # Maksim's Portfolio (version 3)
+
+<hr/>
+
+Preview: https://mmakarenko.netlify.app
+
+Host: [Netlify](https://netlify.com)
+
+<hr/>
+
+<details>
+<summary>v3.4.0.0 - Work page content</summary>
+<ul>
+    <li>v3.4.4.0 - Fill with data.</li>
+        <ul>
+            <li>v3.4.7.0 - Klika Tech.</li>
+            <li>v3.4.6.0 - iTechArt Group.</li>
+            <li>v3.4.5.0 - Zavod Promburvod.</li>
+        </ul>
+    <li>v3.4.3.0 - Add details content to work store.</li>
+    <li>v3.4.3.2 - Add details to work store.</li>
+    <li>v3.4.3.1 - Add zustand work store.</li>
+    <li>v3.4.2.1 - Add preview for work details.</li>
+    <li>v3.4.1.1 - Add tabs components for work list & details.</li>
+</ul>
+</details>
+
 <hr/>
 
 <details>
 <summary>v3.3.0.0 - Skills page content</summary>
 <ul>
-<li>v3.3.3.0 - Add default component for non-content page.</li>
-<li>v3.3.2.6 - View skills items.</li>
-<li>v3.3.1.0 - Add skills params, images, default page component.</li>
+    <li>v3.3.3.0 - Add default component for non-content page.</li>
+    <li>v3.3.2.6 - View skills items.</li>
+    <li>v3.3.1.0 - Add skills params, images, default page component.</li>
 </ul>
 </details>
 
@@ -15,13 +41,13 @@
 <details>
 <summary>v3.2.0.0 - Education page content</summary>
 <ul>
-<li>v3.2.3.3 - Moved unnecessary components to Education Content</li>
-<li>v3.2.3.2 - Add Education details page/dialog</li>
-<li>v3.2.3.1 - Update timeout for opened dialog</li>
-<li>v3.2.3.0 - Add controllable timeout for carousel</li>
-<li>v3.2.2.0 - Add education places</li>
-<li>v3.2.1.0 - Create carousel</li>
-<li>v3.2.0.1 - small fixes</li>
+    <li>v3.2.3.3 - Moved unnecessary components to Education Content</li>
+    <li>v3.2.3.2 - Add Education details page/dialog</li>
+    <li>v3.2.3.1 - Update timeout for opened dialog</li>
+    <li>v3.2.3.0 - Add controllable timeout for carousel</li>
+    <li>v3.2.2.0 - Add education places</li>
+    <li>v3.2.1.0 - Create carousel</li>
+    <li>v3.2.0.1 - small fixes</li>
 </ul>
 </details>
 
@@ -30,10 +56,10 @@
 <details>
 <summary>v3.1.0.0 - Home page content</summary>
 <ul>
-<li>Create UI card</li>
-<li>Animate card appearance</li>
-<li>Add Minsk time and photo from left side of card</li>
-<li>
+    <li>Create UI card</li>
+    <li>Animate card appearance</li>
+    <li>Add Minsk time and photo from left side of card</li>
+    <li>
 <p>Content section:</p>
 <ul>
     <li>
