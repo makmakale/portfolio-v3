@@ -1,4 +1,5 @@
 export const enum WorkIds {
+  klika = "klika",
   iTechArtGroup = "iTechArtGroup",
   pbv = "pbv",
 }
