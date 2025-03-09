@@ -29,15 +29,12 @@ const TabListDirection = React.forwardRef<
     {...props}
   >
     <div className="rounded-full bg-[#323232] w-full h-[.32rem] grid place-items-center">
-      <svg height="15" width="40" className="fill-black">
-        {reverse ? (
-          <polygon points="0,0 20,15 40,0" />
-        ) : (
-          <polygon points="0,15 20,0 40,15" />
-        )}
-        {/*Sorry, your browser does not support inline SVG.*/}
-        {reverse ? "Up" : "Down"}
-      </svg>
+      {reverse ? (
+        <div className="w-0 h-0 border-l-[0.2rem] border-l-transparent border-r-[0.2rem] border-r-transparent border-t-[0.12rem] border-t-black" /> // arrow down
+      ) : (
+        <div className="w-0 h-0 border-l-[0.2rem] border-l-transparent border-r-[0.2rem] border-r-transparent border-b-[0.12rem] border-b-black" /> // arrow up
+      )}
+      <div className="sr-only">{reverse ? "Up" : "Down"}</div>
     </div>
   </div>
 ));

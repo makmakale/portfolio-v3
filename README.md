@@ -2,12 +2,17 @@
 
 <hr/>
 
+Preview: https://mmakarenko.netlify.app
+
+Host: [Netlify](https://netlify.com)
+
+<hr/>
+
 <details>
 <summary>v3.4.0.0 - Work page content</summary>
 <ul>
     <li>v3.4.4.0 - Fill with data.</li>
         <ul>
-            <li>v3.4.8.0 - iTechArt Group.</li>
             <li>v3.4.7.0 - Klika Tech.</li>
             <li>v3.4.6.0 - iTechArt Group.</li>
             <li>v3.4.5.0 - Zavod Promburvod.</li>

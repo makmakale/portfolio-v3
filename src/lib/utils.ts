@@ -21,14 +21,14 @@ export const animate = (variants: Variants) => {
   };
 };
 
-export function getDatePeriod(startDate: string, endDate: string): string {
+export function getDatePeriod(startDate: string, endDate?: string): string {
   const period = {
     startDate: new Date(startDate),
-    endDate: new Date(endDate),
+    endDate: endDate ? new Date(endDate) : undefined,
   };
 
   const formatType = "MMM yyyy";
-  const formattedRange = `${format(period.startDate, formatType)} - ${format(period.endDate, formatType)}`;
+  const formattedRange = `${format(period.startDate, formatType)} - ${period.endDate ? format(period.endDate, formatType) : "now"}`;
 
   return formattedRange;
 }
