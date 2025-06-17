@@ -39,4 +39,5 @@ export enum SkillIds {
   handlebars,
   webpack,
   vite,
+  expo,
 }

@@ -39,4 +39,5 @@ export const skillNames = new Map<SkillIds, string>()
   .set(SkillIds.mongoose, "Mongoose")
   .set(SkillIds.handlebars, "Handlebars")
   .set(SkillIds.vite, "Vite")
+  .set(SkillIds.expo, "Expo")
   .set(SkillIds.webpack, "Webpack");

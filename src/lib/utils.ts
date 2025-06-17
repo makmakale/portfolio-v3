@@ -2,7 +2,7 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Variants } from "framer-motion";
 import {
-  addMonths,
+  addMonths, differenceInCalendarMonths,
   differenceInMonths,
   differenceInYears,
   format,
@@ -40,10 +40,7 @@ export function getDateRange(startDate: string, endDate: string): string {
   };
 
   let years = differenceInYears(period.endDate, period.startDate);
-  let months = differenceInMonths(
-    period.endDate,
-    addMonths(period.startDate, years * 12),
-  );
+  let months = differenceInCalendarMonths(period.endDate, period.startDate) % 12;
 
   if (months === 12) {
     months = 0;
