@@ -36,6 +36,7 @@ import handlebars from "@/assets/images/skills/handlebars.png";
 import webpack from "@/assets/images/skills/webpack.png";
 import vite from "@/assets/images/skills/vite.svg";
 import jira from "@/assets/images/skills/jira.png";
+import expo from "@/assets/images/skills/expo-icon.svg";
 
 export const skillImages = new Map<SkillIds, string>()
   .set(SkillIds.html, html.src)
@@ -76,4 +77,5 @@ export const skillImages = new Map<SkillIds, string>()
   .set(SkillIds.handlebars, handlebars.src)
   .set(SkillIds.webpack, webpack.src)
   .set(SkillIds.vite, vite.src)
-  .set(SkillIds.jira, jira.src);
+  .set(SkillIds.jira, jira.src)
+  .set(SkillIds.expo, expo.src);
